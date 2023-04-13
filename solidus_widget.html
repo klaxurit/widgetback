@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="solidus_widget.css" />
+    </head>
+    <body>
+        <div class="form__widget">
+            <form id="solidus" method="POST">
+                <div class="question" id="question-1">
+                <label for="property__address">
+                    Quel est l’adresse de votre bien à estimer ?
+                </label>
+                <div class="input__wrapper">
+                    <input
+                    type="text"
+                    name="property__address"
+                    id="property__address"
+                    placeholder="3 rue rambuteau, Paris"
+                    />
+                    <svg viewbox="0 0 40 54" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M19.82 53.17S39.4 34.61 39.4 20.53c0-5.19-2.06-10.18-5.74-13.85-3.67-3.67-8.65-5.73-13.84-5.73-5.19 0-10.18 2.06-13.85 5.74-3.67 3.67-5.73 8.65-5.73 13.85 0 14.08 19.59 32.64 19.59 32.64zm0-22.85c-2.6 0-5.09-1.03-6.93-2.87-1.83-1.83-2.86-4.33-2.86-6.93 0-2.6 1.03-5.09 2.87-6.93 1.83-1.83 4.33-2.86 6.93-2.86 2.6 0 5.09 1.03 6.93 2.87 1.83 1.83 2.87 4.33 2.87 6.93 0 2.6-1.03 5.09-2.87 6.93-1.83 1.83-4.33 2.86-6.93 2.86z"
+                    />
+                    </svg>
+                </div>
+                </div>
+
+                <div class="question hidden disabled" id="question-2">
+                <label for="property__type">Quel est votre type de bien ?</label>
+                <div class="property__type__radio__wrapper">
+                    <div class="property__type__radio1">
+                    <input
+                        type="radio"
+                        id="apartment"
+                        name="property__type"
+                        class="hidden"
+                        value="apartment"
+                        data-target="question-3"
+                    />
+                    <div class="box">
+                        <svg
+                        style="padding-bottom: 10px"
+                        fill="none"
+                        viewbox="0 0 144 192"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                            d="m12.408 0.77734c-3.1594 0-6.1894 1.2551-8.4234 3.4891-2.234 2.234-3.4891 5.264-3.4891 8.4234v166.78c0 3.159 1.2551 6.189 3.4891 8.423 2.234 2.234 5.264 3.489 8.4234 3.489h35.738v-41.694c0-1.579 0.6275-3.094 1.7445-4.211s2.632-1.745 4.2117-1.745h35.737c1.5797 0 3.0947 0.628 4.2118 1.745 1.117 1.117 1.7445 2.632 1.7445 4.211v41.694h35.737c3.16 0 6.19-1.255 8.424-3.489s3.489-5.264 3.489-8.423v-166.78c0-3.1594-1.255-6.1894-3.489-8.4234s-5.264-3.4891-8.424-3.4891h-119.12zm11.912 29.781c0-1.5797 0.6275-3.0947 1.7445-4.2117 1.117-1.1171 2.632-1.7446 4.2117-1.7446h11.912c1.5797 0 3.0947 0.6275 4.2117 1.7446 1.117 1.117 1.7446 2.632 1.7446 4.2117v11.912c0 1.5797-0.6276 3.0947-1.7446 4.2117s-2.632 1.7446-4.2117 1.7446h-11.912c-1.5797 0-3.0947-0.6276-4.2117-1.7446s-1.7445-2.632-1.7445-4.2117v-11.912zm35.737 0c0-1.5797 0.6276-3.0947 1.7446-4.2117 1.117-1.1171 2.632-1.7446 4.2117-1.7446h11.912c1.5797 0 3.0947 0.6275 4.2117 1.7446 1.117 1.117 1.7445 2.632 1.7445 4.2117v11.912c0 1.5797-0.6275 3.0947-1.7445 4.2117s-2.632 1.7446-4.2117 1.7446h-11.912c-1.5797 0-3.0947-0.6276-4.2117-1.7446s-1.7446-2.632-1.7446-4.2117v-11.912zm41.694-5.9563h11.913c1.579 0 3.094 0.6275 4.211 1.7446 1.117 1.117 1.745 2.632 1.745 4.2117v11.912c0 1.5797-0.628 3.0947-1.745 4.2117s-2.632 1.7446-4.211 1.7446h-11.913c-1.579 0-3.0945-0.6276-4.2115-1.7446s-1.7445-2.632-1.7445-4.2117v-11.912c0-1.5797 0.6275-3.0947 1.7445-4.2117 1.117-1.1171 2.6325-1.7446 4.2115-1.7446zm-77.431 41.694c0-1.5797 0.6275-3.0947 1.7445-4.2117s2.632-1.7445 4.2117-1.7445h11.912c1.5797 0 3.0947 0.6275 4.2117 1.7445s1.7446 2.632 1.7446 4.2117v11.912c0 1.5797-0.6276 3.0947-1.7446 4.2117s-2.632 1.7445-4.2117 1.7445h-11.912c-1.5797 0-3.0947-0.6275-4.2117-1.7445s-1.7445-2.632-1.7445-4.2117v-11.912zm41.694-5.9562h11.912c1.5797 0 3.0947 0.6275 4.2117 1.7445s1.7445 2.632 1.7445 4.2117v11.912c0 1.5797-0.6275 3.0947-1.7445 4.2117s-2.632 1.7445-4.2117 1.7445h-11.912c-1.5797 0-3.0947-0.6275-4.2117-1.7445s-1.7446-2.632-1.7446-4.2117v-11.912c0-1.5797 0.6276-3.0947 1.7446-4.2117s2.632-1.7445 4.2117-1.7445zm29.781 5.9562c0-1.5797 0.6275-3.0947 1.7445-4.2117s2.6325-1.7445 4.2115-1.7445h11.913c1.579 0 3.094 0.6275 4.211 1.7445s1.745 2.632 1.745 4.2117v11.912c0 1.5797-0.628 3.0947-1.745 4.2117s-2.632 1.7445-4.211 1.7445h-11.913c-1.579 0-3.0945-0.6275-4.2115-1.7445s-1.7445-2.632-1.7445-4.2117v-11.912zm-65.519 29.781h11.912c1.5797 0 3.0947 0.6275 4.2117 1.7446 1.117 1.117 1.7446 2.6322 1.7446 4.2112v11.913c0 1.58-0.6276 3.095-1.7446 4.212s-2.632 1.744-4.2117 1.744h-11.912c-1.5797 0-3.0947-0.627-4.2117-1.744s-1.7445-2.632-1.7445-4.212v-11.913c0-1.579 0.6275-3.0942 1.7445-4.2112 1.117-1.1171 2.632-1.7446 4.2117-1.7446zm29.781 5.9558c0-1.579 0.6276-3.0942 1.7446-4.2112 1.117-1.1171 2.632-1.7446 4.2117-1.7446h11.912c1.5797 0 3.0947 0.6275 4.2117 1.7446 1.117 1.117 1.7445 2.6322 1.7445 4.2112v11.913c0 1.58-0.6275 3.095-1.7445 4.212s-2.632 1.744-4.2117 1.744h-11.912c-1.5797 0-3.0947-0.627-4.2117-1.744s-1.7446-2.632-1.7446-4.212v-11.913zm41.694-5.9558h11.913c1.579 0 3.094 0.6275 4.211 1.7446 1.117 1.117 1.745 2.6322 1.745 4.2112v11.913c0 1.58-0.628 3.095-1.745 4.212s-2.632 1.744-4.211 1.744h-11.913c-1.579 0-3.0945-0.627-4.2115-1.744s-1.7445-2.632-1.7445-4.212v-11.913c0-1.579 0.6275-3.0942 1.7445-4.2112 1.117-1.1171 2.6325-1.7446 4.2115-1.7446z"
+                            fill="#000"
+                        />
+                        </svg>
+                        <label for="property__type1" style="font-weight: 400">
+                        Appartement
+                        </label>
+                    </div>
+                    </div>
+                    <div class="property__type__radio2">
+                    <input
+                        type="radio"
+                        id="house"
+                        name="property__type"
+                        class="hidden"
+                        value="house"
+                        data-target="question-3-bis"
+                    />
+                    <div class="box">
+                        <svg
+                        style="padding-bottom: 10px"
+                        fill="none"
+                        viewbox="0 0 178 192"
+                        xmlns="http://www.w3.org/2000/svg"
+                        >
+                        <path
+                            d="m68.319 184.85v-47.864c0-3.346 3.414-6.76 6.8279-6.76h27.311c3.414 0 6.828 3.414 6.828 6.828v47.796c0 1.81 0.72 3.547 2 4.828 1.281 1.28 3.017 1.999 4.828 1.999h54.623c1.811 0 3.548-0.719 4.828-1.999 1.281-1.281 2-3.018 2-4.828v-95.591c2e-3 -0.8972-0.174-1.786-0.516-2.6155s-0.844-1.5834-1.478-2.2186l-18.49-18.476v-44.968c0-1.8108-0.719-3.5475-1.999-4.828-1.281-1.2805-3.018-1.9998-4.828-1.9998h-13.656c-1.811 0-3.548 0.7193-4.828 1.9998-1.281 1.2805-2 3.0172-2 4.828v17.657l-36.133-36.147c-0.6342-0.63585-1.3877-1.1403-2.2172-1.4846-0.8295-0.34421-1.7188-0.5214-2.6169-0.5214s-1.7874 0.17718-2.6169 0.5214c-0.8295 0.34421-1.583 0.8487-2.2173 1.4846l-81.935 81.935c-0.63365 0.6352-1.1359 1.3891-1.478 2.2186-0.3421 0.8295-0.51736 1.7183-0.51576 2.6155v95.591c0 1.81 0.71936 3.547 1.9998 4.828 1.2805 1.28 3.0172 1.999 4.828 1.999h54.623c1.8109 0 3.5476-0.719 4.8281-1.999 1.2805-1.281 1.9998-3.018 1.9998-4.828z"
+                            fill="#000"
+                        />
+                        </svg>
+                        <label
+                        for="property__type2"
+                        class="porperty__house__label"
+                        style="font-weight: 400; margin-bottom: 10px"
+                        >
+                        Maison
+                        </label>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="question hidden disabled property-type-question" id="question-3">
+                    <div class="apartment">
+                        <label for="surface property-type-question">
+                            Quelle est la surface de votre appartement ?
+                        </label>
+                        <input type="text" name="surface" id="surface" placeholder="m²" />
+                    </div>
+                    <div class="house property-type-question">
+                        <label for="surface_house">
+                            Quelle est la surface de votre maison (loi Carrez) ?
+                        </label>
+                        <input type="text" name="surface_house" id="surface_house" placeholder="m²"/>
+                        <label for="surface_land">
+                            Quelle est la surface totale du terrain (bâtiment inclus) ?
+                        </label>
+                        <input type="text" name="surface_land" id="surface_land" placeholder="m²" />
+                    </div>
+                </div>
+
+                <div class="question hidden disabled" id="question-4">
+                    <label for="room">Combien y a t-il de pièces ?</label>
+                    <div
+                        class="increment__button__wrapper"
+                        style="
+                        display: inline-flex;
+                        align-items: center;
+                        border: 1px solid #ccc;
+                        "
+                    >
+                        <button
+                        type="button"
+                        onclick="app.decrementField('room')"
+                        class="button-decrement"
+                        >
+                        -
+                        </button>
+                        <input
+                        type="number"
+                        name="room"
+                        id="room"
+                        value="1"
+                        min="1"
+                        max="99"
+                        style="
+                            width: 100%;
+                            text-align: center;
+                            border: none;
+                            outline: none;
+                        "
+                        />
+                        <button
+                        type="button"
+                        onclick="app.incrementField('room')"
+                        class="button-increment"
+                        >
+                        +
+                        </button>
+                    </div>
+                </div>
+
+                <div class="question hidden disabled" id="question-5">
+                <label for="bedroom">Combien y a t-il de chambres ?</label>
+                <div
+                    class="increment__button__wrapper"
+                    style="
+                    display: inline-flex;
+                    align-items: center;
+                    border: 1px solid #ccc;
+                    "
+                >
+                    <button
+                    type="button"
+                    onclick="app.decrementField('bedroom')"
+                    class="button-decrement"
+                    >
+                    -
+                    </button>
+                    <input
+                    type="number"
+                    name="bedroom"
+                    id="bedroom"
+                    value="1"
+                    min="1"
+                    max="99"
+                    style="
+                        width: 100%;
+                        text-align: center;
+                        border: none;
+                        outline: none;
+                    "
+                    />
+                    <button
+                    type="button"
+                    onclick="app.incrementField('bedroom')"
+                    class="button-increment"
+                    >
+                    +
+                    </button>
+                </div>
+                </div>
+
+                <div class="question hidden disabled" id="question-6">
+                    <div class="apartment">
+                        <label for="property__level">
+                            À quel étage se situe votre bien ?
+                        </label>
+                        <div class="increment__button__wrapper" style="display: inline-flex; align-items: center; border: 1px solid #ccc;">
+                            <button type="button" onclick="app.decrementField('property__level')" class="button-decrement">
+                            -
+                            </button>
+                            <input
+                            type="number"
+                            name="property__level"
+                            id="property__level"
+                            value="1"
+                            min="1"
+                            max="99"
+                            style="width: 100%;text-align: center; border: none; outline: none;"/>
+                            <button type="button" onclick="app.incrementField('property__level')" class="button-increment" >
+                            +
+                            </button>
+                        </div>
+                        <label for="building_level">
+                            Combien d’étages possèdent votre immeuble ?
+                        </label>
+                        <div
+                            class="increment__button__wrapper"
+                            style="display: inline-flex; align-items: center; border: 1px solid #ccc; ">
+                            <button type="button" onclick="app.decrementField('building__level')" class="button-decrement">
+                            -
+                            </button>
+                            <input
+                            type="number"
+                            name="building__level"
+                            id="building__level"
+                            value="1"
+                            min="1"
+                            max="99"
+                            style="width: 100%; text-align: center; border: none; outline: none;" />
+                            <button type="button" onclick="app.incrementField('building__level')" class="button-increment">
+                            +
+                            </button>
+                        </div>
+                    </div>
+                    <div class="house">
+                        <label for="house_level">
+                            Combien de niveaux possèdent votre maison ?
+                        </label>
+                        <div
+                            class="increment__button__wrapper"
+                            style="
+                            display: inline-flex;
+                            align-items: center;
+                            border: 1px solid #ccc;
+                            "
+                            >
+                            <button
+                            type="button"
+                            onclick="app.decrementField('house__level')"
+                            class="button-decrement"
+                            >
+                            -
+                            </button>
+                            <input
+                            type="number"
+                            name="house__level"
+                            id="house__level"
+                            value="1"
+                            min="1"
+                            max="99"
+                            style="
+                                width: 100%;
+                                text-align: center;
+                                border: none;
+                                outline: none;
+                            "
+                            />
+                            <button
+                            type="button"
+                            onclick="app.incrementField('house__level')"
+                            class="button-increment"
+                            >
+                            +
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question hidden disabled" id="question-7">
+                <label for="construction__year">Année de construction ?</label>
+                <select name="construction__year" id="construction__year">
+                    <option value="" disabled selected>Sélectionnez</option>
+                    <option value="inconnue" name="construction__year1">Inconnue</option>
+                    <option value="avant" name="construction__year2">Avant 1915</option>
+                    <option value="1915-1944" name="construction__year3">1915 - 1944</option>
+                    <option value="1945-1974" name="construction__year4">1945 - 1974</option>
+                    <option value="1975-1989" name="construction__year5">1975 - 1989</option>
+                    <option value="1990-2009" name="construction__year6">1990 - 2009</option>
+                    <option value="apres" name="construction__year7">Après 2010</option>
+                </select>
+                </div>
+
+                <div class="question hidden disabled" id="question-8">
+                <label for="property__dpe">Caractéristiques DPE</label>
+                <select name="property__dpe" id="property__dpe">
+                    <option value="" disabled selected hidden>Sélectionnez</option>
+                    <option value="A" name="property__dpe1">A</option>
+                    <option value="B" name="property__dpe2">B</option>
+                    <option value="C" name="property__dpe3">C</option>
+                    <option value="D" name="property__dpe4">D</option>
+                    <option value="E" name="property__dpe5">E</option>
+                    <option value="F" name="property__dpe6">F</option>
+                    <option value="property__dpe7">G</option>
+                </select>
+                <label for="property__ges">Caractéristiques GES</label>
+                <select name="property__ges" id="property__ges">
+                    <option value="" disabled selected hidden>Sélectionnez</option>
+                    <option value="A" name="property__ges1">A</option>
+                    <option value="B" name="property__ges2">B</option>
+                    <option value="C" name="property__ges3">C</option>
+                    <option value="D" name="property__ges4">D</option>
+                    <option value="E" name="property__ges5">E</option>
+                    <option value="F" name="property__ges6">F</option>
+                    <option value="G" name="property__ges7">G</option>
+                </select>
+                </div>
+
+                <div class="question hidden disabled" id="question-9">
+                <label for="property__view">Caractéristique de la vue</label>
+                <select name="property__view" id="property__view">
+                    <option value="" disabled selected hidden>Sélectionnez</option>
+                    <option name="property__view1" value="visavis">Vis-à-vis</option>
+                    <option name="property__view2" value="degage">Dégagée</option>
+                    <option name="property__view3" value="exceptionnel">Exceptionnel</option>
+                </select>
+                </div>
+
+                <div class="question hidden disabled" id="question-10">
+                <label for="property__exposition">
+                    Quel est l’exposition de votre appartement ?
+                </label>
+                <div class="property__exposition__checkbox__wrapper">
+                    <div class="property__exposition__2checkbox__wrapper">
+                    <div class="property__exposition__checkbox1">
+                        <input
+                        type="checkbox"
+                        id="property__exposition1"
+                        name="property__exposition1"
+                        value="nord"
+                        />
+                        <label for="property__exposition1">Nord</label>
+                    </div>
+                    <div class="property__exposition__checkbox2">
+                        <input
+                        type="checkbox"
+                        id="property__exposition2"
+                        name="property__exposition2"
+                        value="sud"
+                        />
+                        <label for="property__exposition2">Sud</label>
+                    </div>
+                    </div>
+                    <div class="property__exposition__2checkbox__wrapper">
+                    <div class="property__exposition__checkbox3">
+                        <input
+                        type="checkbox"
+                        id="property__exposition3"
+                        name="property__exposition3"
+                        value="est"
+                        />
+                        <label for="property__exposition3">Est</label>
+                    </div>
+                    <div class="property__exposition__checkbox4">
+                        <input
+                        type="checkbox"
+                        id="property__exposition4"
+                        name="property__exposition4"
+                        value="ouest"
+                        />
+                        <label for="property__exposition4">Ouest</label>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="question hidden disabled" id="question-11">
+                <label for="property__commodities">Les annexes et commodités</label>
+                <div class="property__commodities__checkbox__wrapper">
+                    <div class="property__commodities__2checkbox__wrapper">
+                    <div class="property__commodities__checkbox1">
+                        <input
+                        type="checkbox"
+                        id="property__commodities1"
+                        name="property__commodities1"
+                        value="terasse"
+                        />
+                        <label for="property__commodities1">Terrasse</label>
+                    </div>
+                    <div class="property__commodities__checkbox2">
+                        <input
+                        type="checkbox"
+                        id="property__commodities2"
+                        name="property__commodities2"
+                        value="balcon"
+                        />
+                        <label for="property__commodities2">Balcon</label>
+                    </div>
+                    </div>
+                    <div class="property__commodities__2checkbox__wrapper">
+                    <div class="property__commodities__checkbox3">
+                        <input
+                        type="checkbox"
+                        id="property__commodities3"
+                        name="property__commodities3"
+                        value="parking/box"
+                        />
+                        <label for="property__commodities3">Parking/Box</label>
+                    </div>
+                    <div class="property__commodities__checkbox4">
+                        <input
+                        type="checkbox"
+                        id="property__commodities4"
+                        name="property__commodities4"
+                        value="cave"
+                        />
+                        <label for="property__commodities4">Cave</label>
+                    </div>
+                    </div>
+                    <div class="property__commodities__2checkbox__wrapper">
+                    <div class="property__commodities__checkbox5">
+                        <input
+                        type="checkbox"
+                        id="property__commodities5"
+                        name="property__commodities5"
+                        value="ascenseur"
+                        />
+                        <label for="property__commodities5">Ascenseur</label>
+                    </div>
+                    <div class="property__commodities__checkbox6">
+                        <input
+                        type="checkbox"
+                        id="property__commodities6"
+                        name="property__commodities6"
+                        value="concierge"
+                        />
+                        <label for="property__commodities6">Concierge</label>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="question hidden disabled" id="question-12">
+                <label for="property__state">État général du bien</label>
+                <select name="property__state" id="property__state">
+                    <option value="" disabled selected hidden>Sélectionnez</option>
+                    <option value="important__work">
+                    Travaux importants à prévoir
+                    </option>
+                    <option value="tea">Rafraîchissement à prévoir</option>
+                    <option value="standard">Standard</option>
+                    <option value="new">Refait à neuf</option>
+                </select>
+                </div>
+
+                <div class="question hidden disabled" id="question-13">
+                <label for="property__project">Quel est votre projet ?</label>
+                <div class="property__project__checkbox__wrapper">
+                    <div class="property__project__2checkbox__wrapper">
+                    <div class="property__project__checkbox1">
+                        <input
+                        type="radio"
+                        id="property__project1"
+                        name="property__project"
+                        value="1"
+                        />
+                        <label for="property__project1">Vendre ce bien</label>
+                    </div>
+                    <div class="property__project__checkbox2">
+                        <input
+                        type="radio"
+                        id="property__project2"
+                        name="property__project"
+                        value="2"
+                        />
+                        <label for="property__project2">Acheter ce bien</label>
+                    </div>
+                    <div class="property__project__checkbox3">
+                        <input
+                        type="radio"
+                        id="property__project3"
+                        name="property__project"
+                        value="3"
+                        />
+                        <label for="property__project3">Curiosité</label>
+                    </div>
+                    </div>
+                    <div class="property__project__checkbox4">
+                    <input
+                        type="radio"
+                        id="property__project4"
+                        name="property__project"
+                        value="4"
+                    />
+                    <label for="property__project4"
+                        >Acheter ce bien pour le louer</label
+                    >
+                    </div>
+                </div>
+                </div>
+
+                <div class="question hidden disabled" id="question-14">
+                <label for="property__project__delay">
+                    Quel est le délai pour le réaliser ?
+                </label>
+                <div class="property__project__delay__checkbox__wrapper">
+                    <div class="property__project__delay__2checkbox__wrapper">
+                    <div class="property__project__delay__checkbox1">
+                        <input
+                        type="radio"
+                        id="property__project__delay1"
+                        name="property__project__delay"
+                        value="1"
+                        />
+                        <label for="property__project__delay1">Immédiatement</label>
+                    </div>
+                    <div class="property__project__delay__checkbox2">
+                        <input
+                        type="radio"
+                        id="property__project__delay2"
+                        name="property__project__delay"
+                        value="2"
+                        />
+                        <label for="property__project__delay2">Moins de 3 mois</label>
+                    </div>
+                    <div class="property__project__delay__checkbox3">
+                        <input
+                        type="radio"
+                        id="property__project__delay3"
+                        name="property__project__delay"
+                        value="3"
+                        />
+                        <label for="property__project__delay3">3 et 6 mois</label>
+                    </div>
+                    </div>
+                    <div class="property__project__delay__checkbox4">
+                    <input
+                        type="radio"
+                        id="property__project__delay4"
+                        name="property__project__delay"
+                        value="4"
+                    />
+                    <label for="property__project__delay4">Plus de 6 mois</label>
+                    </div>
+                </div>
+                </div>
+
+                <div class="question hidden disabled" id="question-15">
+                <label for="property__client__contact">
+                    Pour accéder à votre pré-estimation détaillée, renseignez vos
+                    informations.
+                </label>
+                <div class="property__client__contact__wrapper">
+                    <div class="property__client__contact__2input__wrapper">
+                    <div class="property__client__contact__input__firstname property__client__contact__input">
+                        <input
+                        type="text"
+                        placeholder="Michel"
+                        name="property__client__contact__firstname"
+                        />
+                        <label for="property__client__contact__firstname">Prénom</label>
+                    </div>
+                    <div class="property__client__contact__input__lastname property__client__contact__input">
+                        <input type="text" placeholder="Dupont" name="property__client__contact__lastname"/>
+                        <label for="property__client__contact__lastname">Nom</label>
+                    </div>
+                    </div>
+                    <div class="property__client__contact__input__email property__client__contact__input">
+                        <input type="text" placeholder="michel.dupont@gmail.com" name="property__client__contact__email"/>
+                        <label for="property__client__contact__email">Email</label>
+                    </div>
+                    <div class="property__client__contact__input__phone property__client__contact__input">
+                        <input type="text" placeholder="0646758889" name="property__client__contact__phone"/>
+                        <label for="property__client__contact__phone">Téléphone</label>
+                    </div>
+                </div>
+                </div>
+                <button class="continueBtn">Continuer</button>
+            </form>
+            <div class="bottom-section" id="first-section">
+                <h2 class="title">Estimation de votre bien</h2>
+                <p class="text">
+                    En moins de 2 minutes, nous estimons la valeur actuelle d'un
+                    bien à partir de ses caractéristiques et du marché local.
+                </p>
+                <p class="text">
+                    Veuillez compléter vos informations avec le plus de détails
+                    possibles pour que la valeur affichée soit au plus proche de
+                    la réalité.
+                </p>
+                <div class="related-questions">
+                    <ul style="display: flex" class="steps">
+                        <li class="opacity-transition active mobile-steps">Adresse</li>
+                        <li class="opacity-transition inactive mobile-steps">Type de bien</li>
+                        <li class="opacity-transition inactive mobile-steps">Surface</li>
+                        <div class="progress-bar">
+                            <span class="indicator"></span>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="solidus_widget.js"></script>
+    </body>
+</html>
