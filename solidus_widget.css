@@ -729,7 +729,7 @@ input:checked + .box {
     }
     .question {
       position: relative;
-      left: -200px;
+      left: -150px;
       min-height: 40vh;
       min-width: 30vw;
       width: 500px;
@@ -737,7 +737,7 @@ input:checked + .box {
     }
     .bottom-section {
         position: absolute;
-        right: 150px;
+        right: 60px;
         top: 150px;
         bottom: inherit;
         width: 360px;
@@ -766,8 +766,19 @@ input:checked + .box {
     }
 }
 @media (min-width: 1200px) {
+  .question {
+    left: -250px;
+  }
   .disabled {
     pointer-events: none;
     opacity: 0.2;
+  }
+}
+@media (min-width: 1600px) {
+  .question {
+    left: -300px;
+  }
+  .bottom-section {
+    right: 300px
   }
 }

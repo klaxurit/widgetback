@@ -1,0 +1,11 @@
+name = "solidus-widget"
+compatibility_date = "2023-04-13"
+type = "javascript"
+account_id = "9d68ade04423f2acd2e020c1ea756aae"
+workers_dev = true
+
+[build]
+command = "npm install"
+[build.upload]
+format = "service-worker"
+main = "./index.js"
