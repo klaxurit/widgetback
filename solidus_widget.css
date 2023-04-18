@@ -161,6 +161,10 @@ select {
   height: 45px;
   white-space: nowrap;
 }
+input[type="radio"],
+input[type="checkbox"] {
+  visibility: hidden;
+}
 .property__exposition__checkbox1 input[type="checkbox"]:checked + label::before,
 .property__exposition__checkbox2 input[type="checkbox"]:checked + label::before,
 .property__exposition__checkbox3 input[type="checkbox"]:checked + label::before,
